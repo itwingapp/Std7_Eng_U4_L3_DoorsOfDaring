@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<title>Doors of Daring | Unit 4 Lesson 3 | Class 7 English</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;margin:0;background:#e8f4f8;background-image:radial-gradient(circle at 10% 10%,#d4eaf2 0%,transparent 40%),radial-gradient(circle at 90% 90%,#e0f0e8 0%,transparent 40%);color:#1a2a3a;min-height:100vh;overflow-x:hidden}
+.app{max-width:780px;margin:0 auto;min-height:100vh;background:#fffef9;box-shadow:0 0 30px rgba(0,0,0,.08);overflow-x:hidden;padding-bottom:30px}
+.screen{display:none;padding:14px 14px 26px;animation:fadeIn .28s ease}.screen.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.hero{background:linear-gradient(135deg,#0d47a1 0%,#1565c0 50%,#00897b 100%);color:#fff;border-radius:18px;padding:22px 18px 20px;margin:12px 4px 18px;box-shadow:0 8px 20px rgba(13,71,161,.25);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;background:rgba(255,255,255,.08);border-radius:50%}
+.hero-unit{font-size:.8rem;letter-spacing:.04em;color:#bbdefb;font-weight:600}
+.hero h1{font-size:1.45rem;margin:6px 0 4px;font-weight:800;line-height:1.3}
+.prep-badge{display:inline-block;margin-top:8px;background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.5);color:#fff;font-weight:700;font-size:.78rem;padding:6px 14px;border-radius:20px}
+.progress-wrap{margin-top:14px;background:rgba(255,255,255,.18);border-radius:20px;height:10px;overflow:hidden}
+.progress-bar{height:100%;background:#ffd54f;width:0%;transition:width .4s;border-radius:20px}
+.progress-text{font-size:.72rem;margin-top:6px;color:#e3f2fd}
+.sec-title{font-size:1.05rem;font-weight:800;color:#0d47a1;margin:22px 4px 10px;display:flex;align-items:center;gap:8px;border-bottom:3px solid #ffd54f;padding-bottom:6px}
+.sec-num{background:#0d47a1;color:#fff;width:26px;height:26px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+.sec-desc{font-size:.8rem;color:#546e7a;margin:0 4px 10px;line-height:1.5}
+.btn-list{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
+.act-btn{width:100%;text-align:left;border:none;border-radius:14px;padding:13px 14px;display:flex;align-items:center;gap:12px;cursor:pointer;color:#fff;font-family:inherit;font-size:.95rem;font-weight:700;line-height:1.35;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.act-btn:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(0,0,0,.18)}
+.act-icon{font-size:1.35rem;flex-shrink:0;width:30px;text-align:center}
+.act-check{margin-left:auto;font-size:1rem;flex-shrink:0;opacity:.85}
+.c1{background:#1565c0}.c2{background:#00897b}.c3{background:#ef6c00}.c4{background:#7b1fa2}.c5{background:#c62828}.c6{background:#2e7d32}.c7{background:#283593}.c8{background:#d84315}
+.topbar{display:flex;align-items:center;gap:8px;background:#0d47a1;color:#fff;padding:12px;border-radius:14px;margin-bottom:16px;position:sticky;top:8px;z-index:20;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.topbar h2{font-size:1rem;margin:0;flex:1;font-weight:800;line-height:1.3}
+.icon-btn{background:rgba(255,255,255,.2);border:none;color:#fff;font-size:1.05rem;padding:6px 12px;border-radius:9px;cursor:pointer}
+.card{background:#fff;border:1.5px solid #e0e7ee;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+.readbox{background:#fff8e1;border-left:4px solid #ffc107;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.9rem;line-height:1.65;color:#3e2723}
+.tip{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:8px;padding:10px 12px;margin:10px 0;font-size:.85rem;color:#0d47a1;line-height:1.55}
+.qtext{font-weight:700;color:#0d47a1;margin-bottom:10px;font-size:.95rem}
+textarea{width:100%;min-height:110px;border:2px solid #cfd8dc;border-radius:10px;padding:10px;font-family:inherit;font-size:.9rem;line-height:1.6;resize:vertical}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{border:none;border-radius:9px;padding:9px 16px;font-weight:700;font-size:.85rem;cursor:pointer;color:#fff;box-shadow:0 3px 0 rgba(0,0,0,.15);font-family:inherit}
+.btn:active{transform:translateY(2px);box-shadow:none}
+.btn-save{background:#00897b}.btn-hint{background:#ef6c00}.btn-check{background:#1565c0}
+.story-para{background:#fff8e1;border-left:4px solid #ff9800;padding:12px;border-radius:8px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.story-para p{flex:1;line-height:1.7;font-size:1rem;margin:0;color:#333;font-weight:600}
+.mini-play{background:#ff9800;color:#fff;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.quiz-opt{display:block;width:100%;text-align:left;background:#f5f7fa;border:2px solid #e0e7ee;border-radius:10px;padding:11px 12px;margin-bottom:9px;cursor:pointer;font-size:.9rem;font-weight:600;color:#1a2a3a;font-family:inherit}
+.quiz-opt.correct{background:#c8e6c9;border-color:#2e7d32;color:#1b5e20}
+.quiz-opt.wrong{background:#ffcdd2;border-color:#c62828;color:#b71c1c}
+.quiz-opt.disabled{pointer-events:none}
+.explain{font-size:.82rem;background:#e8f5e9;border-radius:8px;padding:8px 10px;margin-top:6px;color:#1b5e20;display:none}
+.explain.show{display:block}
+.score-box{text-align:center;padding:20px 10px}.score-box .big{font-size:2.4rem;font-weight:800;color:#0d47a1}
+.model{background:#e8f5e9;border-left:4px solid #2e7d32;border-radius:8px;padding:10px 12px;font-size:.88rem;line-height:1.65;color:#1b5e20;margin-top:9px;display:none}
+.model.show{display:block}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#0d47a1;color:#fff;padding:11px 22px;border-radius:10px;font-weight:700;font-size:.9rem;z-index:999;opacity:0;pointer-events:none;transition:opacity .25s;max-width:88%;text-align:center}
+.toast.show{opacity:1}
+.footer-note{text-align:center;font-size:.75rem;color:#789;margin-top:24px;padding:0 10px}
+.print-paper{background:#fff;border:1.5px solid #cfd8dc;border-radius:10px;padding:1cm;margin:10px 0}
+.print-header{text-align:center;margin-bottom:10px;border-bottom:2px solid #0d47a1;padding-bottom:10px}
+.print-header h3{margin:4px 0;color:#0d47a1;font-size:1.1rem}
+.print-meta{display:flex;justify-content:space-between;font-size:.8rem;margin:10px 0;color:#455a64;flex-wrap:wrap;gap:6px}
+.print-instr{font-size:.78rem;background:#fff8e1;border-radius:8px;padding:8px 10px;margin-bottom:12px;color:#5d4037;line-height:1.6}
+.qsection-title{font-weight:800;color:#0d47a1;margin:16px 0 8px;font-size:.9rem;border-bottom:1.5px dashed #ccc;padding-bottom:4px}
+.qp-line{margin-bottom:9px;font-size:.88rem;line-height:1.6}
+.qp-item{background:#fff;border:1.5px solid #e0e7ee;border-radius:12px;padding:12px;margin-bottom:12px}
+.qp-q{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.qp-q-text{font-weight:700;font-size:.9rem;color:#1a2a3a;line-height:1.55;flex:1}
+.marks-badge{background:#0d47a1;color:#fff;font-size:.7rem;padding:3px 9px;border-radius:20px;flex-shrink:0;font-weight:700}
+.btn-toggle{background:#ef6c00;color:#fff;border:none;padding:7px 14px;border-radius:8px;font-size:.8rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:9px}
+.ans-box{background:#e8f5e9;border-left:4px solid #2e7d32;border-radius:8px;padding:10px 12px;font-size:.88rem;line-height:1.65;color:#1b5e20;margin-top:9px;display:none}
+.ans-box.show{display:block}
+.match-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.match-row select{padding:8px;border:2px solid #cfd8dc;border-radius:8px;font-family:inherit;font-size:.88rem;min-width:150px}
+.match-row.correct select{border-color:#2e7d32;background:#e8f5e9}
+.match-row.wrong select{border-color:#c62828;background:#ffebee}
+@media print{.no-print{display:none!important}.print-paper{border:none;padding:1cm}}
+@media(max-width:420px){.hero h1{font-size:1.25rem}.act-btn{font-size:.88rem;padding:12px}}
+</style>
+</head>
+<body>
+<div class="app">
+<div id="home" class="screen active">
+  <div class="hero">
+    <div class="hero-unit">English · Class 7 · Unit 4 · Lesson 3</div>
+    <h1>Doors of Daring</h1>
+    <div class="prep-badge">✨ Prepared by : Smart Vidhya</div>
+    <div class="progress-wrap"><div class="progress-bar" id="progBar"></div></div>
+    <div class="progress-text" id="progText">0 / 24 activities completed</div>
+  </div>
+  <div class="sec-title"><span class="sec-num">1</span> Read the Poem</div>
+  <div class="btn-list">
+    <button class="act-btn c1" onclick="openScreen('read')"><span class="act-icon">📖</span>Read + Listen (🔊 per stanza)<span class="act-check" id="chk-read"></span></button>
+  </div>
+  <div class="sec-title"><span class="sec-num">2</span> Poem & Language Activities</div>
+  <p class="sec-desc">Appreciation, imagery, figures of speech, courage, creative writing</p>
+  <div class="btn-list">
+    <button class="act-btn c2" onclick="openScreen('a1')"><span class="act-icon">🏔️</span>Comprehension Questions<span class="act-check" id="chk-a1"></span></button>
+    <button class="act-btn c2" onclick="openScreen('a2')"><span class="act-icon">🖼️</span>Visual Imagery<span class="act-check" id="chk-a2"></span></button>
+    <button class="act-btn c3" onclick="openScreen('a3')"><span class="act-icon">🚪</span>Limitations as Opportunities<span class="act-check" id="chk-a3"></span></button>
+    <button class="act-btn c3" onclick="openScreen('a4')"><span class="act-icon">✍️</span>Poem Appreciation<span class="act-check" id="chk-a4"></span></button>
+    <button class="act-btn c4" onclick="openScreen('a5')"><span class="act-icon">💬</span>Quotes on Courage<span class="act-check" id="chk-a5"></span></button>
+    <button class="act-btn c4" onclick="openScreen('a6')"><span class="act-icon">📝</span>Figures of Speech & Vocabulary<span class="act-check" id="chk-a6"></span></button>
+    <button class="act-btn c2" onclick="openScreen('a7')"><span class="act-icon">🌟</span>My Door of Daring<span class="act-check" id="chk-a7"></span></button>
+    <button class="act-btn c3" onclick="openScreen('a8')"><span class="act-icon">🎵</span>Rhyme & Rhythm<span class="act-check" id="chk-a8"></span></button>
+    <button class="act-btn c4" onclick="openScreen('a9')"><span class="act-icon">📜</span>Paraphrase the Poem<span class="act-check" id="chk-a9"></span></button>
+    <button class="act-btn c2" onclick="openScreen('a10')"><span class="act-icon">🎨</span>Draw & Describe (Imagine)<span class="act-check" id="chk-a10"></span></button>
+    <button class="act-btn c3" onclick="openScreen('a11')"><span class="act-icon">✍️</span>Write Your Own Stanza<span class="act-check" id="chk-a11"></span></button>
+    <button class="act-btn c4" onclick="openScreen('a12')"><span class="act-icon">🗣️</span>Recitation Tips & Practice<span class="act-check" id="chk-a12"></span></button>
+    <button class="act-btn c2" onclick="openScreen('a13')"><span class="act-icon">🔗</span>Compare Poem & Story (Unit link)<span class="act-check" id="chk-a13"></span></button>
+    <button class="act-btn c3" onclick="openScreen('a14')"><span class="act-icon">👪</span>Family Courage Circle<span class="act-check" id="chk-a14"></span></button>
+  </div>
+  <div class="sec-title"><span class="sec-num">3</span> Exam Corner</div>
+  <div class="btn-list">
+    <button class="act-btn c5" onclick="openScreen('quiz')"><span class="act-icon">❓</span>Mega Quiz (12 Qs)<span class="act-check" id="chk-quiz"></span></button>
+    <button class="act-btn c6" onclick="openScreen('tf')"><span class="act-icon">✅</span>True / False<span class="act-check" id="chk-tf"></span></button>
+    <button class="act-btn c7" onclick="openScreen('match')"><span class="act-icon">🔗</span>Match the Following<span class="act-check" id="chk-match"></span></button>
+    <button class="act-btn c8" onclick="openScreen('model')"><span class="act-icon">📋</span>Model Question Paper<span class="act-check" id="chk-model"></span></button>
+    <button class="act-btn c5" onclick="openScreen('test')"><span class="act-icon">📝</span>Test Paper (Print / Download)<span class="act-check" id="chk-test"></span></button>
+  </div>
+  <div class="sec-title"><span class="sec-num">4</span> Extra</div>
+  <div class="btn-list">
+    <button class="act-btn c1" onclick="openScreen('author')"><span class="act-icon">👤</span>About Henry Van Dyke Jr.<span class="act-check" id="chk-author"></span></button>
+    <button class="act-btn c2" onclick="openScreen('vocab')"><span class="act-icon">📚</span>Word Gallery<span class="act-check" id="chk-vocab"></span></button>
+  </div>
+  <div class="footer-note">Prepared by : Smart Vidhya · Class 7 English · Unit 4</div>
+</div>
+
+<div id="read" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>📖 Read the Poem</h2></div>
+  <div class="card">
+    <div class="btn-row" style="margin-bottom:12px">
+      <button class="btn btn-save" onclick="readAll()">🔊 Read All</button>
+      <button class="btn btn-hint" onclick="stopSpeak()">⏹ Stop</button>
+      <button class="btn btn-check" onclick="markDone('read')">✔ Mark as Read</button>
+    </div>
+    <div class="story-para"><p><b>DOORS OF DARING</b> — Henry Van Dyke Jr.</p><button class="mini-play" onclick="speak(this.previousElementSibling.innerText)">🔊</button></div>
+    <div class="story-para"><p>The mountains that enfold the vale<br>With walls of granite, steep and high,<br>Invite the fearless foot to scale<br>Their stairway toward the sky.</p><button class="mini-play" onclick="speak(this.previousElementSibling.innerText)">🔊</button></div>
+    <div class="story-para"><p>The restless, deep, dividing sea<br>That flows and foams from shore to shore,<br>Calls to its sunburned chivalry,<br>“Push out, set sail, explore!”</p><button class="mini-play" onclick="speak(this.previousElementSibling.innerText)">🔊</button></div>
+    <div class="story-para"><p>And all the bars at which we fret,<br>That seem to prison and control,<br>Are but the doors of daring, set<br>Ajar before the soul.</p><button class="mini-play" onclick="speak(this.previousElementSibling.innerText)">🔊</button></div>
+  </div>
+</div>
+
+<div id="a1" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🏔️ Comprehension Questions</h2></div>
+  <div class="card">
+    <p class="qtext">1. How do the mountains enfold the vale?</p>
+    <textarea id="a1t1"></textarea>
+    <p class="qtext">2. Why does the poet describe the mountains as the stairway to the sky?</p>
+    <textarea id="a1t2"></textarea>
+    <p class="qtext">3. What does the poet mean by ‘sunburned chivalry’?</p>
+    <textarea id="a1t3"></textarea>
+    <p class="qtext">4. Which lines suggest we should treat limitations as opportunities?</p>
+    <textarea id="a1t4"></textarea>
+    <p class="qtext">5. How does the poet want us to look at life’s challenges?</p>
+    <textarea id="a1t5"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a1t1','a1t2','a1t3','a1t4','a1t5'],'a1')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m1')">💡 Model</button></div>
+    <div class="model" id="m1">1. With walls of granite, steep and high.<br>2. Climbing them takes us higher – towards achievement and the sky.<br>3. Brave sailors / explorers who are tanned by the sun and full of courage.<br>4. “And all the bars at which we fret, / That seem to prison and control, / Are but the doors of daring...”<br>5. As opportunities (doors of daring) rather than prisons – challenges invite us to be brave.</div>
+  </div>
+</div>
+
+<div id="a2" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🖼️ Visual Imagery</h2></div>
+  <div class="card">
+    <p class="qtext">A visual image is a vivid picture created by words. Find three visual images from the poem and explain what picture each creates in your mind.</p>
+    <textarea id="a2t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a2t1'],'a2')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m2')">💡 Model</button></div>
+    <div class="model" id="m2">1. “Walls of granite, steep and high” – tall, rocky mountains surrounding a valley.<br>2. “Restless, deep, dividing sea that flows and foams” – a vast, moving ocean with white waves.<br>3. “Doors of daring, set ajar before the soul” – open doors inviting the spirit to step through courageously.</div>
+  </div>
+</div>
+
+<div id="a3" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🚪 Limitations as Opportunities</h2></div>
+  <div class="card">
+    <p class="qtext">The poet says the bars that seem to prison us are actually “doors of daring”. Explain this idea. Give one example from your life or from history.</p>
+    <textarea id="a3t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a3t1'],'a3')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m3')">💡 Model</button></div>
+    <div class="model" id="m3">Obstacles that seem to stop us can become opportunities if we face them bravely. Example: A student who fears public speaking can treat a class speech as a “door of daring” and grow in confidence. Historically, explorers saw the sea not as a barrier but as a path to new lands.</div>
+  </div>
+</div>
+
+<div id="a4" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>✍️ Poem Appreciation</h2></div>
+  <div class="card">
+    <p class="qtext">Write a short appreciation of the poem (theme, imagery, message, your favourite lines).</p>
+    <textarea id="a4t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a4t1'],'a4')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m4')">💡 Model</button></div>
+    <div class="model" id="m4">“Doors of Daring” by Henry Van Dyke Jr. encourages us to face challenges with courage. The poet uses strong visual images – mountains, sea, and doors – to show that what looks like a barrier is actually an invitation to grow. The message is clear: limitations are opportunities. My favourite lines are the last stanza, where bars become doors set ajar before the soul.</div>
+  </div>
+</div>
+
+<div id="a5" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>💬 Quotes on Courage</h2></div>
+  <div class="card">
+    <p class="qtext">Find or write 3 famous quotes about bravery/courage. Explain how one of them connects with the poem.</p>
+    <textarea id="a5t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a5t1'],'a5')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m5')">💡 Model</button></div>
+    <div class="model" id="m5">1. “Courage is not the absence of fear, but the triumph over it.” – Nelson Mandela<br>2. “Fortune favours the brave.” – Latin proverb<br>3. “If we did all the things we are capable of, we would literally astound ourselves.” – Thomas Edison (Unit quote)<br>Connection: The poem and these quotes all say that facing fear and challenges leads to growth – the “doors of daring”.</div>
+  </div>
+</div>
+
+<div id="a6" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>📝 Figures of Speech & Vocabulary</h2></div>
+  <div class="card">
+    <p class="qtext">Identify personification and metaphor in the poem. Use these words in sentences: enfold, fearless, restless, chivalry, fret, ajar.</p>
+    <textarea id="a6t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a6t1'],'a6')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m6')">💡 Model</button></div>
+    <div class="model" id="m6"><b>Personification:</b> Mountains “invite”; sea “calls”.<br><b>Metaphor:</b> Mountains as “stairway toward the sky”; bars as “doors of daring”.<br><b>Sentences:</b> The hills enfold the village. A fearless climber scaled the peak. The restless waves never stop. Knights showed chivalry. Do not fret over small problems. The door was left ajar.</div>
+  </div>
+</div>
+
+<div id="a7" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🌟 My Door of Daring</h2></div>
+  <div class="card">
+    <p class="qtext">What is one “bar” (fear or difficulty) in your life that you can turn into a “door of daring”? Write a short paragraph about how you will face it.</p>
+    <textarea id="a7t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a7t1'],'a7')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m7')">💡 Model</button></div>
+    <div class="model" id="m7">I used to fear speaking in front of the class. That fear felt like a prison. After reading this poem, I see it as a door of daring. I will prepare well, practise at home, and volunteer for the next presentation. Each time I speak, the door opens wider and my confidence grows.</div>
+  </div>
+</div>
+
+
+<div id="a8" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🎵 Rhyme & Rhythm</h2></div>
+  <div class="card">
+    <p class="qtext">1. List the rhyming words in each stanza.<br>2. What is the rhyme scheme (e.g. ABAB)?<br>3. How does the rhythm make the poem feel energetic or inviting?</p>
+    <textarea id="a8t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a8t1'],'a8')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m8')">💡 Model</button></div>
+    <div class="model" id="m8">Stanza 1: vale/scale, high/sky → ABAB<br>Stanza 2: sea/chivalry, shore/explore → ABAB<br>Stanza 3: fret/set, control/soul → ABAB<br>The regular beat and open sounds make the poem sound like a call to action – energetic and hopeful.</div>
+  </div>
+</div>
+<div id="a9" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>📜 Paraphrase the Poem</h2></div>
+  <div class="card">
+    <p class="qtext">Rewrite each stanza in simple modern English (2–3 sentences per stanza) so a younger student can understand.</p>
+    <textarea id="a9t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a9t1'],'a9')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m9')">💡 Model</button></div>
+    <div class="model" id="m9">1. Tall rocky mountains surround the valley. They invite brave people to climb them like stairs to the sky.<br>2. The deep moving sea calls to brave sailors: “Sail out and explore!”<br>3. The things that seem to stop and control us are really open doors of courage waiting for our spirit to walk through.</div>
+  </div>
+</div>
+<div id="a10" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🎨 Draw & Describe</h2></div>
+  <div class="card">
+    <p class="qtext">Imagine one scene from the poem (mountain stairway / foaming sea / open door). Describe it in vivid detail (colour, sound, feeling) as if you are painting it with words. (You may also sketch on paper.)</p>
+    <textarea id="a10t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a10t1'],'a10')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m10')">💡 Model</button></div>
+    <div class="model" id="m10">I see a door of polished wood standing slightly open on a rocky path. Golden light spills through the gap. Beyond it the path climbs into blue mountains. The air smells of pine. My heart beats faster – the door is waiting for me to step through with courage.</div>
+  </div>
+</div>
+<div id="a11" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>✍️ Write Your Own Stanza</h2></div>
+  <div class="card">
+    <p class="qtext">Write one new stanza (4 lines) in the same style about a modern challenge (exam, new school, learning a skill, speaking up). Try to keep a similar rhyme if possible.</p>
+    <textarea id="a11t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a11t1'],'a11')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m11')">💡 Model</button></div>
+    <div class="model" id="m11">The exam that fills the heart with dread,<br>That seems to block the upward way,<br>Is but a door of daring spread<br>Before the soul that dares to stay.</div>
+  </div>
+</div>
+<div id="a12" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🗣️ Recitation Tips</h2></div>
+  <div class="card">
+    <p class="qtext">Write 5 tips for reciting this poem effectively (voice, pace, expression, pauses). Then mark which lines you would emphasise and why.</p>
+    <textarea id="a12t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a12t1'],'a12')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m12')">💡 Model</button></div>
+    <div class="model" id="m12">Tips: 1. Stand tall 2. Clear voice 3. Pause at line ends 4. Stress key words (fearless, explore, daring) 5. Smile on the last lines to show hope.<br>Emphasise “Push out, set sail, explore!” and “doors of daring” – they carry the message.</div>
+  </div>
+</div>
+<div id="a13" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🔗 Poem & Story Connection</h2></div>
+  <div class="card">
+    <p class="qtext">How does “Doors of Daring” connect with “Ranji’s Magic Bat” and the idea of confidence in The Doorway? Write a short paragraph linking the three.</p>
+    <textarea id="a13t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a13t1'],'a13')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m13')">💡 Model</button></div>
+    <div class="model" id="m13">All three texts of Unit 4 celebrate courage and self-belief. The news report shows a team that dared to dominate. Ranji learns that the real magic is confidence inside him. The poem tells us that every barrier is a door of daring. Together they teach: face the challenge, believe in yourself, and step through the door.</div>
+  </div>
+</div>
+<div id="a14" class="screen">
+  <div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>👪 Family Courage Circle</h2></div>
+  <div class="card">
+    <p class="qtext">For family discussion – write answers together:<br>
+    1. Name one “mountain” or “bar” each family member has faced.<br>
+    2. How did courage help?<br>
+    3. One new “door of daring” the family will open this month.</p>
+    <textarea id="a14t1"></textarea>
+    <div class="btn-row"><button class="btn btn-save" onclick="saveA(['a14t1'],'a14')">💾 Save</button><button class="btn btn-hint" onclick="toggleM('m14')">💡 Model</button></div>
+    <div class="model" id="m14">Examples: starting a new job, learning to swim, speaking in public, moving house. Courage turned fear into growth. Family goal: try a new skill together / support one member’s challenge / visit a new place.</div>
+  </div>
+</div>
+
+<div id="quiz" class="screen"><div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>❓ Mega Quiz</h2></div><div class="card" id="quizBox"></div></div>
+<div id="tf" class="screen"><div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>✅ True / False</h2></div><div class="card" id="tfBox"></div></div>
+<div id="match" class="screen"><div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>🔗 Match</h2></div><div class="card"><p class="qtext">Match the words.</p><div id="matchBox"></div><div class="btn-row" style="margin-top:12px"><button class="btn btn-check" onclick="checkMatch()">✓ Check</button><button class="btn btn-save" onclick="markDone('match')">✔ Done</button></div><div class="status-msg" id="matchStatus"></div></div></div>
+<div id="model" class="screen"><div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>📋 Model Question Paper</h2></div><div class="card" id="modelBox"></div></div>
+<div id="test" class="screen">
+  <div class="topbar no-print"><button class="icon-btn" onclick="goHome()">←</button><h2>📝 Test Paper</h2></div>
+  <div class="print-paper" id="testPaper">
+    <div class="print-header"><div style="font-size:.75rem;color:#789">English Reader · Class 7</div><h3>Unit 4 · Lesson 3 · Doors of Daring</h3><div style="font-size:.8rem">Time: 40 min · Marks: 25</div></div>
+    <div class="print-meta"><span>Name: ________________</span><span>Class: ______</span><span>Date: ______</span></div>
+    <div class="print-instr">Answer all questions.</div>
+    <div class="qsection-title">I. Short answers (5 × 1 = 5)</div>
+    <div class="qp-line">1. Who wrote “Doors of Daring”?</div>
+    <div class="qp-line">2. What do the mountains invite us to do?</div>
+    <div class="qp-line">3. What does the sea call out?</div>
+    <div class="qp-line">4. What are the “bars” according to the poet?</div>
+    <div class="qp-line">5. What is a visual image?</div>
+    <div class="qsection-title">II. Short answers (4 × 2 = 8)</div>
+    <div class="qp-line">6. How do the mountains enfold the vale?</div>
+    <div class="qp-line">7. Explain “sunburned chivalry”.</div>
+    <div class="qp-line">8. Which lines treat limitations as opportunities?</div>
+    <div class="qp-line">9. Identify one personification from the poem.</div>
+    <div class="qsection-title">III. Long answers (2 × 6 = 12)</div>
+    <div class="qp-line">10. Write an appreciation of the poem “Doors of Daring”.</div>
+    <div class="qp-line">11. “All the bars... are but the doors of daring.” Explain with an example from your life.</div>
+  </div>
+  <div class="btn-row no-print" style="justify-content:center;margin-top:14px">
+    <button class="btn btn-save" onclick="window.print()">🖨️ Print</button>
+    <button class="btn btn-hint" onclick="downloadTest()">⬇️ Download</button>
+    <button class="btn btn-check" onclick="markDone('test')">✔ Done</button>
+  </div>
+</div>
+<div id="author" class="screen"><div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>👤 About Henry Van Dyke Jr.</h2></div><div class="card"><div class="readbox">Henry Van Dyke Jr. (1852–1933) was an American writer, poet and professor. He taught English Literature at Princeton University for over twenty years. His poetry often explores religion and man’s relationship with nature. Notable works include The Other Wise Man and The First Christmas Tree. “Doors of Daring” encourages readers to face life’s challenges with courage.</div><button class="btn btn-check" onclick="markDone('author')">✔ Done</button></div></div>
+<div id="vocab" class="screen"><div class="topbar"><button class="icon-btn" onclick="goHome()">←</button><h2>📚 Word Gallery</h2></div><div class="card">
+<div class="tip"><b>enfold</b> – surround or wrap</div>
+<div class="tip"><b>vale</b> – a valley</div>
+<div class="tip"><b>granite</b> – hard rock</div>
+<div class="tip"><b>fearless</b> – without fear; brave</div>
+<div class="tip"><b>scale</b> – climb up</div>
+<div class="tip"><b>restless</b> – never still; constantly moving</div>
+<div class="tip"><b>chivalry</b> – bravery and honour (as of knights)</div>
+<div class="tip"><b>fret</b> – worry or be anxious</div>
+<div class="tip"><b>ajar</b> – slightly open</div>
+<div class="tip"><b>daring</b> – boldness; courage to take risks</div>
+<button class="btn btn-check" onclick="markDone('vocab')">✔ Done</button></div></div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const TOTAL=24;let done=JSON.parse(localStorage.getItem('doors_done')||'{}');
+function openScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));const el=document.getElementById(id);if(el){el.classList.add('active');window.scrollTo(0,0);if(id==='quiz')buildQuiz();if(id==='tf')buildTF();if(id==='match')buildMatch();if(id==='model')buildModel();}}
+function goHome(){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('home').classList.add('active');updateProgress();}
+function markDone(id){done[id]=true;localStorage.setItem('doors_done',JSON.stringify(done));updateProgress();showToast('Completed ✓');}
+function updateProgress(){const n=Object.keys(done).filter(k=>done[k]).length;const bar=document.getElementById('progBar');const txt=document.getElementById('progText');if(bar)bar.style.width=(n/TOTAL*100)+'%';if(txt)txt.textContent=n+' / '+TOTAL+' activities completed';Object.keys(done).forEach(k=>{const el=document.getElementById('chk-'+k);if(el&&done[k])el.textContent='✓';});}
+function saveA(ids,key){ids.forEach(id=>{const el=document.getElementById(id);if(el)localStorage.setItem('dd_'+id,el.value);});markDone(key);showToast('Saved');}
+function toggleM(id){const el=document.getElementById(id);if(el)el.classList.toggle('show');}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);}
+function speak(text){if(!window.speechSynthesis)return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-IN';u.rate=0.85;window.speechSynthesis.speak(u);}
+function readAll(){const paras=document.querySelectorAll('#read .story-para p');let i=0;function next(){if(i>=paras.length)return;const u=new SpeechSynthesisUtterance(paras[i].innerText);u.lang='en-IN';u.rate=0.85;u.onend=()=>{i++;next();};window.speechSynthesis.speak(u);}window.speechSynthesis.cancel();next();}
+function stopSpeak(){if(window.speechSynthesis)window.speechSynthesis.cancel();}
+function buildQuiz(){const box=document.getElementById('quizBox');if(box.dataset.built)return;box.dataset.built='1';const qs=[{q:'Who wrote “Doors of Daring”?',opts:['Ruskin Bond','Henry Van Dyke Jr.','William Wordsworth','Robert Frost'],correct:1,exp:'Henry Van Dyke Jr.'},{q:'The mountains are described as:',opts:['a prison','a stairway toward the sky','a sea','a door'],correct:1,exp:'Stairway toward the sky.'},{q:'What does the sea call out?',opts:['Stay home','Push out, set sail, explore','Be afraid','Turn back'],correct:1,exp:'Push out, set sail, explore!'},{q:'“Sunburned chivalry” refers to:',opts:['knights who fear the sun','brave explorers/sailors','mountains','doors'],correct:1,exp:'Brave sailors or explorers.'},{q:'The bars that seem to prison us are actually:',opts:['real prisons','doors of daring','mountains','seas'],correct:1,exp:'Doors of daring.'},{q:'“Ajar” means:',opts:['closed','slightly open','broken','locked'],correct:1,exp:'Slightly open.'},{q:'Personification in the poem:',opts:['mountains invite','doors are wood','sea is blue','vale is green'],correct:0,exp:'Mountains invite; sea calls.'},{q:'The main message of the poem is:',opts:['avoid challenges','face challenges with courage','stay in the valley','fear the sea'],correct:1,exp:'Treat challenges as opportunities – be daring.'},{q:'A visual image is:',opts:['a photograph','a vivid picture created by words','a painting','a movie'],correct:1,exp:'A vivid picture of words.'},{q:'The poet was a professor at:',opts:['Oxford','Princeton','Harvard','Cambridge'],correct:1,exp:'Princeton University.'},{q:'“Enfold” means:',opts:['open','surround','climb','explore'],correct:1,exp:'Surround or wrap.'},{q:'The unit title “Rustle of Wings” suggests:',opts:['birds only','the sound of taking flight / courage','doors','cricket'],correct:1,exp:'The sound of taking flight – courage and aspiration.'}];
+let html='';qs.forEach((item,i)=>{html+='<div style="margin-bottom:16px"><div class="qtext">'+(i+1)+'. '+item.q+'</div>';item.opts.forEach((o,j)=>{html+='<button class="quiz-opt" onclick="answerQuiz(this,'+j+','+item.correct+',\''+item.exp.replace(/'/g,"\\'")+'\')">'+o+'</button>';});html+='<div class="explain" id="exp'+i+'"></div></div>';});html+='<div class="score-box" id="quizScore" style="display:none"><div class="big" id="scoreNum">0</div><div> / 12</div></div>';box.innerHTML=html;}
+let quizScore=0,quizAnswered=0;
+function answerQuiz(btn,sel,correct,exp){const parent=btn.parentElement;parent.querySelectorAll('.quiz-opt').forEach(o=>o.classList.add('disabled'));if(sel===correct){btn.classList.add('correct');quizScore++;}else{btn.classList.add('wrong');parent.querySelectorAll('.quiz-opt')[correct].classList.add('correct');}const expEl=parent.querySelector('.explain');expEl.textContent=exp;expEl.classList.add('show');quizAnswered++;if(quizAnswered>=12){document.getElementById('quizScore').style.display='block';document.getElementById('scoreNum').textContent=quizScore;markDone('quiz');}}
+function buildTF(){const box=document.getElementById('tfBox');if(box.dataset.built)return;box.dataset.built='1';const qs=[{q:'Henry Van Dyke Jr. wrote the poem. (T/F)',opts:['True','False'],correct:0,exp:'True.'},{q:'The mountains are a prison. (T/F)',opts:['True','False'],correct:1,exp:'False – they invite us to climb.'},{q:'The sea calls us to explore. (T/F)',opts:['True','False'],correct:0,exp:'True.'},{q:'Bars that seem to control us are doors of daring. (T/F)',opts:['True','False'],correct:0,exp:'True.'},{q:'“Ajar” means tightly closed. (T/F)',opts:['True','False'],correct:1,exp:'False – slightly open.'},{q:'The poem encourages fear of challenges. (T/F)',opts:['True','False'],correct:1,exp:'False – it encourages daring.'}];
+let html='';qs.forEach((item,i)=>{html+='<div style="margin-bottom:14px"><div class="qtext">'+(i+1)+'. '+item.q+'</div>';item.opts.forEach((o,j)=>{html+='<button class="quiz-opt" onclick="answerTF(this,'+j+','+item.correct+',\''+item.exp.replace(/'/g,"\\'")+'\')">'+o+'</button>';});html+='<div class="explain" id="tfexp'+i+'"></div></div>';});box.innerHTML=html;}
+function answerTF(btn,sel,correct,exp){const parent=btn.parentElement;parent.querySelectorAll('.quiz-opt').forEach(o=>o.classList.add('disabled'));if(sel===correct)btn.classList.add('correct');else{btn.classList.add('wrong');parent.querySelectorAll('.quiz-opt')[correct].classList.add('correct');}const expEl=parent.querySelector('.explain');expEl.textContent=exp;expEl.classList.add('show');markDone('tf');}
+function buildMatch(){const box=document.getElementById('matchBox');if(box.dataset.built)return;box.dataset.built='1';const pairs=[{left:'enfold',right:'surround'},{left:'vale',right:'valley'},{left:'fearless',right:'brave'},{left:'restless',right:'never still'},{left:'ajar',right:'slightly open'},{left:'chivalry',right:'bravery and honour'}];const rights=pairs.map(p=>p.right);let html='';pairs.forEach((p,i)=>{html+='<div class="match-row" id="mr'+i+'"><span style="font-weight:700;min-width:100px">'+p.left+'</span><select id="ms'+i+'"><option value="">-- Select --</option>';rights.forEach(r=>{html+='<option value="'+r+'">'+r+'</option>';});html+='</select></div>';});box.innerHTML=html;window.matchAnswers=pairs.map(p=>p.right);}
+function checkMatch(){let correct=0;window.matchAnswers.forEach((ans,i)=>{const sel=document.getElementById('ms'+i);const row=document.getElementById('mr'+i);row.classList.remove('correct','wrong');if(sel.value===ans){row.classList.add('correct');correct++;}else row.classList.add('wrong');});const st=document.getElementById('matchStatus');if(correct===window.matchAnswers.length){st.textContent='🎉 All correct!';st.className='status-msg status-ok';markDone('match');}else{st.textContent=correct+' / '+window.matchAnswers.length+' correct.';st.className='status-msg';}}
+function buildModel(){const box=document.getElementById('modelBox');if(box.dataset.built)return;box.dataset.built='1';const qs=[{q:'Who is the poet?',marks:'1',a:'Henry Van Dyke Jr.'},{q:'How do the mountains enfold the vale?',marks:'2',a:'With walls of granite, steep and high.'},{q:'Explain “sunburned chivalry”.',marks:'2',a:'Brave sailors/explorers who are tanned by the sun and full of courage.'},{q:'Which lines treat limitations as opportunities?',marks:'3',a:'“And all the bars at which we fret, / That seem to prison and control, / Are but the doors of daring, set / Ajar before the soul.”'},{q:'Write an appreciation of the poem.',marks:'5',a:'Theme of courage; visual imagery of mountains and sea; message that challenges are opportunities; favourite lines from last stanza.'},{q:'Identify personification and metaphor.',marks:'3',a:'Personification: mountains invite, sea calls. Metaphor: mountains as stairway; bars as doors of daring.'},{q:'What is a visual image? Give one example.',marks:'2',a:'A vivid picture created by words. Example: walls of granite, steep and high.'},{q:'How should we look at life’s challenges according to the poet?',marks:'2',a:'As doors of daring – opportunities to be brave and grow.'}];
+let html='';qs.forEach((item,i)=>{html+='<div class="qp-item"><div class="qp-q"><span class="qp-q-text">'+(i+1)+'. '+item.q+'</span><span class="marks-badge">'+item.marks+' marks</span></div><button class="btn-toggle" onclick="toggleAns(\'mans'+i+'\',this)">👁️ Show Answer</button><div class="ans-box" id="mans'+i+'">'+item.a+'</div></div>';});box.innerHTML=html;markDone('model');}
+function toggleAns(id,btn){const el=document.getElementById(id);const show=el.classList.toggle('show');btn.textContent=show?'🙈 Hide':'👁️ Show Answer';}
+function downloadTest(){const text=document.getElementById('testPaper').innerText;const blob=new Blob([text],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Doors_of_Daring_Test.txt';a.click();showToast('Downloaded');}
+['a1t1','a1t2','a1t3','a1t4','a1t5','a2t1','a3t1','a4t1','a5t1','a6t1','a7t1','a8t1','a9t1','a10t1','a11t1','a12t1','a13t1','a14t1'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=localStorage.getItem('dd_'+id)||'';});
+updateProgress();
+</script>
+</body>
+</html>
